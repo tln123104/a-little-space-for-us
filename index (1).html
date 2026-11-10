@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff2f6">
+<title>A Little Space For Us ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--pink:#e88eae;--deep:#a84e76;--ink:#55434b;--muted:#927d86;--cream:#fffaf8;--line:#f1dce4}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#fff7f8,#fffaf2 55%,#f8f2ff);color:var(--ink);font-family:'DM Sans',sans-serif}
+main{width:min(760px,calc(100% - 28px));margin:36px auto 60px}
+.hero{position:relative;overflow:hidden;text-align:center;padding:48px 24px 38px;border:1px solid #f5dce5;border-radius:28px;background:rgba(255,255,255,.82);box-shadow:0 18px 55px #b66d8914}
+.flower{font-size:42px;display:block;margin-bottom:12px}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--deep);font-weight:700}
+h1{font:600 clamp(32px,7vw,48px) 'Playfair Display',serif;color:#9d5574;margin:12px 0}
+.hero p{max-width:510px;margin:0 auto;color:var(--muted);line-height:1.8;font-size:14px}
+.decor{position:absolute;opacity:.22;font-size:56px}.d1{top:12px;left:18px}.d2{right:18px;bottom:10px}
+form{margin-top:22px}.card{background:#ffffffdb;border:1px solid var(--line);border-radius:22px;padding:25px;margin:16px 0;box-shadow:0 8px 28px #9f58730a}
+.section-head{display:flex;gap:12px;align-items:center;margin-bottom:18px}.emoji{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#fff0f5;font-size:21px}
+h2{font:600 22px 'Playfair Display',serif;color:#98516f;margin:0}.hint{font-size:12px;color:var(--muted);margin:4px 0 0}
+.field{margin:17px 0}.field label{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+input[type=text],textarea,select{width:100%;border:1px solid #ecd8e0;background:#fffdfd;border-radius:13px;padding:13px 14px;font:14px 'DM Sans',sans-serif;color:var(--ink);outline:none;transition:.2s}
+textarea{min-height:94px;resize:vertical;line-height:1.65}input:focus,textarea:focus,select:focus{border-color:#d98aaa;box-shadow:0 0 0 3px #fbeaf1}
+::placeholder{color:#b9a8af}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{position:relative}.chip input{position:absolute;opacity:0}.chip span{display:inline-block;padding:9px 12px;border:1px solid #efdce3;border-radius:999px;font-size:12px;background:#fff;cursor:pointer}.chip input:checked+span{background:#fce8f0;border-color:#d98aaa;color:#914967}
+.note{font-size:12px;line-height:1.65;color:var(--muted);background:#fff5f8;border-radius:12px;padding:12px 14px}
+button{width:100%;border:0;border-radius:15px;padding:16px;background:linear-gradient(100deg,#dc8eae,#c9789b);color:white;font:700 15px 'DM Sans',sans-serif;letter-spacing:.3px;cursor:pointer;box-shadow:0 9px 22px #cf83a333;transition:transform .2s}
+button:hover{transform:translateY(-2px)}button:disabled{opacity:.65;cursor:wait;transform:none}
+#status{display:none;margin-top:14px;padding:14px;border-radius:13px;font-size:13px;line-height:1.6}
+#status.ok{display:block;background:#eff9f1;color:#376d48}#status.err{display:block;background:#fff0f0;color:#9a4545}
+footer{text-align:center;color:#a58f98;font-size:12px;padding:24px 8px 0}
+@media(max-width:520px){main{margin:14px auto 36px}.hero{padding:38px 18px 30px}.card{padding:20px 17px}.d1{left:8px}.d2{right:8px}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+<span class="decor d1">✿</span><span class="decor d2">♡</span>
+<span class="flower">🌸</span>
+<div class="eyebrow">A little space for us</div>
+<h1>Điều anh muốn hiểu về em</h1>
+<p>Anh tạo góc nhỏ này để lắng nghe em nhiều hơn. Em cứ thoải mái chia sẻ những điều em thích, chưa thích, hay mong muốn ở anh nhé. Không có câu trả lời đúng hay sai đâu — anh thật lòng muốn hiểu em hơn. ♡</p>
+</header>
+
+<form id="loveForm">
+<section class="card">
+<div class="section-head"><div class="emoji">🌷</div><div><h2>Những điều về em</h2><p class="hint">Để anh hiểu thêm thế giới nhỏ của em.</p></div></div>
+<div class="field"><label>1. Em thích màu sắc nào nhất?</label><div class="chips">
+<label class="chip"><input type="checkbox" name="Màu sắc yêu thích" value="Hồng"><span>Hồng 🌸</span></label>
+<label class="chip"><input type="checkbox" name="Màu sắc yêu thích" value="Xanh"><span>Xanh 🩵</span></label>
+<label class="chip"><input type="checkbox" name="Màu sắc yêu thích" value="Trắng"><span>Trắng 🤍</span></label>
+<label class="chip"><input type="checkbox" name="Màu sắc yêu thích" value="Tím"><span>Tím 💜</span></label>
+<label class="chip"><input type="checkbox" name="Màu sắc yêu thích" value="Tím cẩm tú cầu"><span>Tím cẩm tú cầu 💜</span></label></div>
+<input type="text" name="Màu sắc khác (tự viết)" placeholder="Nếu là màu khác, em viết ở đây nhé..." style="margin-top:10px"></div>
+<div class="field"><label for="flower">2. Loài hoa em yêu thích nhất là gì?</label><textarea id="flower" name="Loài hoa yêu thích" placeholder="Anh nhớ em thích hoa cẩm tú cầu, nhưng em còn thích loài hoa nào khác không?"></textarea></div>
+<div class="field"><label for="hobbies">3. Những sở thích, món ăn, đồ uống hoặc hoạt động em yêu thích?</label><textarea id="hobbies" name="Sở thích" placeholder="Kể anh nghe những điều em thích nhé..."></textarea></div>
+<div class="field"><label for="dreamgift">4. Có món quà nào em luôn muốn được nhận không?</label><textarea id="dreamgift" name="Món quà mong muốn" placeholder="Một món đồ, một trải nghiệm, hay điều giản dị nào đó..."></textarea></div>
+<div class="field"><label for="comfort">5. Khi buồn hoặc mệt, em muốn được quan tâm như thế nào?</label><textarea id="comfort" name="Cách muốn được quan tâm" placeholder="Anh nên làm gì để em cảm thấy dễ chịu hơn?"></textarea></div>
+</section>
+
+<section class="card">
+<div class="section-head"><div class="emoji">🧸</div><div><h2>Những điều em không thích</h2><p class="hint">Anh muốn biết để tránh làm em không vui.</p></div></div>
+<div class="field"><label for="dislikes">6. Em không thích điều gì? Có điều gì anh làm khiến em khó chịu không?</label><textarea id="dislikes" name="Điều không thích" placeholder="Em cứ nói thật lòng nhé..."></textarea></div>
+<div class="field"><label for="boundaries">7. Có giới hạn hoặc điều riêng tư nào em muốn anh tôn trọng?</label><textarea id="boundaries" name="Điều muốn anh tôn trọng" placeholder="Ví dụ: thời gian riêng, cách nhắn tin, chuyện gia đình..."></textarea></div>
+</section>
+
+<section class="card">
+<div class="section-head"><div class="emoji">💗</div><div><h2>Góc nhìn của em về anh</h2><p class="hint">Anh muốn lắng nghe cả lời khen lẫn góp ý.</p></div></div>
+<div class="field"><label for="strengths">8. Em thấy anh có những ưu điểm gì?</label><textarea id="strengths" name="Ưu điểm của anh" placeholder="Điều gì ở anh khiến em vui hoặc cảm thấy được yêu thương?"></textarea></div>
+<div class="field"><label for="weaknesses">9. Anh có nhược điểm nào cần thay đổi không?</label><textarea id="weaknesses" name="Nhược điểm cần thay đổi" placeholder="Em cứ góp ý chân thành, anh sẽ nghiêm túc lắng nghe."></textarea></div>
+<div class="field"><label for="expectations">10. Em mong anh làm điều gì nhiều hơn hoặc ít đi?</label><textarea id="expectations" name="Điều mong anh thay đổi" placeholder="Anh muốn biết mình có thể làm tốt hơn ở đâu..."></textarea></div>
+</section>
+
+<section class="card">
+<div class="section-head"><div class="emoji">💌</div><div><h2>Chuyện của chúng mình</h2><p class="hint">Một vài điều anh muốn nghe từ em.</p></div></div>
+<div class="field"><label for="memory">11. Kỷ niệm nào của hai đứa khiến em nhớ nhất?</label><textarea id="memory" name="Kỷ niệm đáng nhớ" placeholder="Anh cũng muốn biết khoảnh khắc nào đặc biệt với em..."></textarea></div>
+<div class="field"><label for="wish">12. Em mong chúng mình sẽ cùng làm điều gì trong thời gian tới?</label><textarea id="wish" name="Mong muốn tương lai" placeholder="Một buổi hẹn, một chuyến đi, hay điều gì đó nhỏ thôi..."></textarea></div>
+<div class="field"><label for="message">13. Có điều gì em muốn nói với anh mà chưa có dịp nói không?</label><textarea id="message" name="Lời nhắn dành cho anh" placeholder="Anh đang lắng nghe đây. ♡"></textarea></div>
+</section>
+
+<section class="card">
+<div class="field"><label for="nickname">Em muốn anh gọi em bằng tên gì? (không bắt buộc)</label><input id="nickname" type="text" name="Tên gọi" placeholder="Tên thân mật của em..."></div>
+<p class="note">♡ Em không cần trả lời hết tất cả câu hỏi. Cứ chia sẻ những gì em thấy thoải mái. Câu trả lời sẽ được gửi riêng về email anh đã cài đặt.</p>
+</section>
+<!-- Honeypot chống spam -->
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<button id="sendBtn" type="submit">Gửi những điều em muốn nói ♡</button>
+<div id="status" role="status" aria-live="polite"></div>
+</form>
+<footer>Made with love, just for you · 🌸</footer>
+</main>
+<script>
+const form = document.getElementById('loveForm');
+const button = document.getElementById('sendBtn');
+const statusBox = document.getElementById('status');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  button.disabled = true;
+  button.textContent = 'Anh đang chờ những lời nhắn của em...';
+  statusBox.className = '';
+  statusBox.style.display = 'none';
+
+  const data = new FormData(form);
+  const payload = {};
+  for (const [key, value] of data.entries()) {
+    if (key === '_honey') { payload[key] = value; continue; }
+    if (payload[key]) payload[key] += ', ' + value;
+    else payload[key] = value;
+  }
+  payload._subject = 'Một lời nhắn mới từ website A Little Space For Us';
+  payload._template = 'table';
+  payload._captcha = 'false';
+
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/lengocthanh_t67@hus.edu.vn', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json();
+    if (response.ok && (result.success === 'true' || result.success === true)) {
+      statusBox.textContent = 'Gửi thành công rồi! Cảm ơn em đã dành thời gian chia sẻ với anh. Anh sẽ đọc thật kỹ nhé. 💗';
+      statusBox.className = 'ok';
+      form.reset();
+    } else {
+      throw new Error(result.message || 'Không gửi được lúc này.');
+    }
+  } catch (error) {
+    statusBox.textContent = 'Chưa gửi được câu trả lời. Em thử lại sau nhé. Nếu đây là lần đầu sử dụng, anh cần xác nhận email nhận thư từ FormSubmit trước.';
+    statusBox.className = 'err';
+  } finally {
+    button.disabled = false;
+    button.textContent = 'Gửi những điều em muốn nói ♡';
+  }
+});
+</script>
+</body>
+</html>
